@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Cuaca</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <h1>Prediksi Cuaca</h1>
+
+    <!-- Input untuk mencari kota -->
+    <div class="search-container">
+        <input type="text" id="cityInput" placeholder="Masukkan nama kota...">
+        <button onclick="getWeather()">Cek Cuaca</button>
+    </div>
+
+    <!-- Tampilan hasil cuaca -->
+    <div id="weather-result" class="hidden">
+        <img id="country-flag" src="" alt="Bendera" class="flag">
+        <h2 id="city-name"></h2>
+        <p id="temperature"></p>
+        <p id="condition"></p>
+        <p id="humidity"></p>
+        <p id="wind-speed"></p>
+    </div>
+
+    <!-- Spinner loading -->
+    <div id="loading" class="hidden">
+        <p>🔄 Memuat data cuaca...</p>
+    </div>
+
+    <!-- Pilihan negara/kota dengan bendera -->
+    <h2>Pilih Negara atau Kota</h2>
+    <div class="country-list">
+        <button onclick="getWeatherByCity('Jakarta', 'ID')">
+            <img src="https://flagcdn.com/w40/id.png" class="flag"> Jakarta
+        </button>
+        <button onclick="getWeatherByCity('Bali', 'ID')">
+            <img src="https://flagcdn.com/w40/id.png" class="flag"> Bali
+        </button>
+        <button onclick="getWeatherByCity('Lampung', 'ID')">
+            <img src="https://flagcdn.com/w40/id.png" class="flag"> Lampung
+        </button>
+        <button onclick="getWeatherByCity('Singapore', 'SG')">
+            <img src="https://flagcdn.com/w40/sg.png" class="flag"> Singapura
+        </button>
+        <button onclick="getWeatherByCity('New York', 'US')">
+            <img src="https://flagcdn.com/w40/us.png" class="flag"> Amerika (New York)
+        </button>
+        <button onclick="getWeatherByCity('Taipei', 'TW')">
+            <img src="https://flagcdn.com/w40/tw.png" class="flag"> Taiwan (Taipei)
+        </button>
+    </div>
+
+</body>
+</html>
